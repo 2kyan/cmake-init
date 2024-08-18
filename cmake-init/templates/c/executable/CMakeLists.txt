@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.{% if cmake_321 %}21{% else %}14{% end %})
+cmake_minimum_required(VERSION 3.{% if cmake_321 %}21{% else %}14{% end %}) {% if conan %}
+
+set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES cmake/conan_provider.cmake) {% end %}
 
 include(cmake/prelude.cmake)
 
